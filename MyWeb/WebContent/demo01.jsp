@@ -38,14 +38,14 @@ function ajaxFunction(){
 		
 		request.send();
 	}
-	
+	//获取
 	function get() {
 		//1.创建xmlhttprequest
 		var request = ajaxFunction();
 		//2.发送请求
 		//request.open("GET","DemoServlet01",true);
 		request.open("GET","/MyWeb/DemoServlet01?name=yves&age=18",true);
-		//3.获取响应数据
+		//3.获取响应数据,注册监听的意思
 		request.onreadystatechange = function(){
 			
 			if(request.readyState == 4 && request.status == 200){
