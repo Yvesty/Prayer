@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:命名空间,用于隔离sql语句,后续有重要用处  -->
+<mapper namespace="user">
+	<select id="getUserById" parameterType="int" resultType="com.yvesty.mybatis.pojo.User">
+	SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE id = #{id}
+	</select>
+	
+	<!-- resultType ,如果返回结果为集合,只需设置为每一个的数据库类型 -->
+	<select id="getUserByUserName" parameterType="String" resultType="com.yvesty.mybatis.pojo.User">
+	SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` 
+<!-- 	WHERE  username like #{name}; -->
+	WHERE username Like '%${value}%';
+	</select>
+</mapper>
