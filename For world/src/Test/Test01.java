@@ -14,7 +14,7 @@ public class Test01 {
 		Student s6 = new Student("王五", "语文", 80);
 		Student s7 = new Student("王五", "英语", 70);
 		Student s8 = new Student("王五", "物理", 90);
-		System.out.println(s8.toString());
+//		System.out.println(s8.toString());
 		List<Student> students = new ArrayList<>();
 		//将学生成绩对象存放到list中去
 		students.add(s1);
