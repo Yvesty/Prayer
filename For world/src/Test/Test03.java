@@ -14,6 +14,7 @@ public class Test03 {
 	
 	public static void main(String[] args) {
 		Test03 aa = new haha();
+		Test03 bb = new haha();
 	}
 }
 class haha  extends Test03{
