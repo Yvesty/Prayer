@@ -1,11 +1,10 @@
 package algorithm;
 
-import org.junit.Test;
 
 public class testClockwiseOutput {
     //顺时针打印一个矩阵
     
-    @Test
+
     public void test(){
         int[][] num = new int[100][100];
         int n = 6;
